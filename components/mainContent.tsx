@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function mainContent(){
     return(
@@ -8,7 +8,7 @@ export default function mainContent(){
                     <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                         <div className="sq-u-5 sq-u-sm-2 sq-u-md-1 sq-u-lg-1">
                             <div className="sq_box img-u-1 img-u-sm-1 img-u-md-1">
-                                <Image fill src="/mmotif/images/projet/MEDIA/Drax/project_AD_Drax_01.jpg" alt="" className="c_img" />
+                                <img src="/mmotif/images/projet/MEDIA/Drax/project_AD_Drax_01.jpg" alt="" className="c_img" />
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,7 @@ export default function mainContent(){
                     <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                         <div className="sq-u-5 sq-u-sm-5 sq-u-md-1 sq-u-lg-1">
                             <div className="sq_box img-u-3 img-u-sm-3 img-u-md-3 fl-u-md-2 fl-u-lg-0">
-                                <Image fill src="/mmotif/images/projet/AD/EX/project_AD_EX_01.jpg" alt="" className="c_img"/>
+                                <img src="/mmotif/images/projet/AD/EX/project_AD_EX_01.jpg" alt="" className="c_img"/>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ export default function mainContent(){
                     <div className="pure-u-1 pure-u-lg-1-2">
                         <div className="sq-u-5 sq-u-sm-2 sq-u-md-6 sq-u-lg-6">
                             <div className="sq_box img-u-1">
-                                <Image fill src="/mmotif/images/projet/MEDIA/Lamborghini/under_3.jpg" className="c_img" alt=""/>
+                                <img src="/mmotif/images/projet/MEDIA/Lamborghini/under_3.jpg" className="c_img" alt=""/>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ export default function mainContent(){
                     <div className="pure-u-1 pure-u-lg-1-2">
                         <div className="sq-u-1 sq-u-sm-2 sq-u-md-6 sq-u-lg-4 sq_box_hidden">
                             <div className="sq_box img-u-2">
-                                <Image fill src="/mmotif/images/under_4.jpg" alt="" className="c_img"/>
+                                <img src="/mmotif/images/under_4.jpg" alt="" className="c_img"/>
                             </div>
                         </div>
                     </div>

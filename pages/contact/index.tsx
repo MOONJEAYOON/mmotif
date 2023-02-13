@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 
 export default function Contact() {
     return (
@@ -44,8 +44,8 @@ export default function Contact() {
                 <div className="pure-u-1 pure-u-md-2-3 pure-u-lg-3-4">
                     <div className="sq-u-1 sq-u-md-1 sq-u-lg-3">
                         <div className="sq_box">
-                            <Image fill className="img_map_s c_img" src="/mmotif/images/map_s.jpg" alt=""/>
-                            <Image fill className="img_map c_img" src="/mmotif/images/map.jpg" alt="" /></div>
+                            <img className="img_map_s c_img" src="/mmotif/images/map_s.jpg" alt=""/>
+                            <img className="img_map c_img" src="/mmotif/images/map.jpg" alt="" /></div>
                     </div>
                 </div>
             </div>
