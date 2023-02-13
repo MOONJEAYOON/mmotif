@@ -7,23 +7,23 @@ import 'swiper/css';
 
 export default function Home() {
     let Fvideo_bg1 = styled.div`
-        background:url(mmotif/images/main01.jpg) no-repeat 50% 50%;
+        background:url(images/main01.jpg) no-repeat 50% 50%;
         background-size:100% 100%;
     `;
     let Fvideo_bg2 = styled.div`
-        background:url(mmotif/images/main04.jpg) no-repeat 50% 50%;
+        background:url(images/main04.jpg) no-repeat 50% 50%;
         background-size:100% 100%;
     `;
     let Fvideo_bg3 = styled.div`
-        background:url(mmotif/images/main03.jpg) no-repeat 50% 50%;
+        background:url(images/main03.jpg) no-repeat 50% 50%;
         background-size:100% 100%;
     `;
     let Fvideo_bg4 = styled.div`
-        background:url(mmotif/images/main05.jpg) no-repeat 50% 50%;
+        background:url(images/main05.jpg) no-repeat 50% 50%;
         background-size:100% 100%;
     `;
     let Fvideo_bg5 = styled.div`
-        background:url(mmotif/images/main02.jpg) no-repeat 50% 50%;
+        background:url(images/main02.jpg) no-repeat 50% 50%;
         background-size:100% 100%;
     `;
     return (
