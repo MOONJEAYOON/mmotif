@@ -1,12 +1,13 @@
 {
   "name": "mmotif",
   "version": "0.1.0",
+  "homepage": "http://moonjeayoon.github.io/mmotif",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
     "predeploy": "npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
+    "deploy": "next build && next export && touch out/.nojekyll && git add -f out/ && git commit -m 'deploy to gh-pages' && git subtree push --prefix out origin gh-pages",
     "start": "next start",
     "lint": "next lint"
   },
