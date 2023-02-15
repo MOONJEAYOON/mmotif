@@ -12,10 +12,26 @@ datasource db {
 
 model Project {
   id Int  @id @default(autoincrement())
-  category String @unique
-  title String @unique
-  image_sq_1 String @unique
-  image_sq_2 String @unique
-  tit_sq_1 String @unique
-  tit_sq_2 String @unique
+  category String
+  image_list_1 String
+  image_list_2 String
+  txt_list_1 String
+  txt_list_2 String
+  image_detail_1 String
+  image_detail_2 String
+  image_detail_2_bg String
+  image_detail_3 String
+  image_detail_4 String
+  image_detail_5 String
+  image_detail_6 String
+  image_detail_7 String
+  txt_detail_1_1 String
+  txt_detail_1_2 String
+  txt_detail_1_3 String
+  txt_detail_2_1 String
+  txt_detail_2_2 String
+  txt_detail_2_3 String
+  txt_detail_3_1 String
+  txt_detail_3_1_bg String
 }
+

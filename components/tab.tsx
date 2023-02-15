@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Tab() {
     return(
         <div id="tab">
@@ -10,10 +12,18 @@ export default function Tab() {
                 </svg>
             </h3>
             <ul>
-                <li><a className="current" href="project_all.html">ALL</a></li>
-                <li><a href="project_media.html">GRAPHIC</a></li>
-                <li><a href="project_ad.html">ADVERTISING</a></li>
-                <li><a href="project_print.html">PRINT</a></li>
+                <li>
+                    <Link href="/work">ALL</Link>
+                </li>
+                <li>
+                    <Link href="/work?graphic">GRAPHIC</Link>
+                </li>
+                <li>
+                    <Link href="/work?advertising">ADVERTISING</Link>
+                </li>
+                <li>
+                    <Link href="/work?print">PRINT</Link>
+                </li>
             </ul>
         </div>
     )

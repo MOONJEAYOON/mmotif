@@ -42,7 +42,7 @@ export default function Header() {
                     </div>
                 </div>
                 {
-                    router.pathname === '/work'
+                    router.pathname.indexOf('/work') != -1
                     ? <Tab />
                     : null
                 }

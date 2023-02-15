@@ -8,7 +8,6 @@ import contents from '../styles/contents';
 
 export default function Layout({ children }:any) {
     const router = useRouter();
-    console.log("==========router==========="+router.pathname);
     return (
         <>
             {
