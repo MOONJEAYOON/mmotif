@@ -1,9 +1,25 @@
 import Link from "next/link";
+import React, {useRef} from "react";
+import {useRouter} from "next/router";
 
 export default function Tab() {
+    const tabRef = useRef<HTMLDivElement>(null);
+    const router = useRouter();
+
+    let categoryName = 'Brouse by Category';
+    if (router.asPath === '/work?graphic') {
+        categoryName = 'graphic';
+    } else if (router.asPath === '/work?advertising') {
+        categoryName = 'advertising';
+    } else if (router.asPath === '/work?print') {
+        categoryName = 'print';
+    } else {
+        categoryName = 'Brouse by Category';
+    }
+
     return(
-        <div id="tab">
-            <h3>Brouse by Category
+        <div id="tab" ref={tabRef}>
+            <h3 onClick={event => tabRef.current?.classList.toggle('on')}><span>{categoryName}</span>
                 <svg className="icon_Arrow" version="1.0" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                      viewBox="0 0 20 11">
                     <path d="M10,11c-0.133,0-0.259-0.055-0.349-0.152L0.127,0.795c-0.179-0.191-0.167-0.491,0.026-0.669

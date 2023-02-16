@@ -1,12 +1,27 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Tab from '../components/tab'
+import React, { useRef } from "react";
 
 export default function Header() {
     const router = useRouter();
+    const hdRef = useRef<HTMLDivElement>(null);
+    const toggleHd = () => {
+        if (hdRef.current?.classList.contains('on')){
+            hdRef.current?.classList.remove('on');
+        } else {
+            hdRef.current?.classList.add('on');
+        }
+    }
+    const removeHd = () => {
+        if (hdRef.current?.classList.contains('on')){
+            hdRef.current?.classList.remove('on');
+        }
+    }
+
     return (
         <>
-            <div id="header">
+            <div id="header" ref={hdRef}>
                 <div className="header">
                     <h1 className="logo">
                         <Link href="/">
@@ -21,7 +36,7 @@ export default function Header() {
                         </svg>
                         </Link>
                     </h1>
-                    <button data-label="Menu" className="menu-toggle">
+                    <button data-label="Menu" className="menu-toggle" onClick={toggleHd}>
                         <span className="icon-bars"></span>
                     </button>
                 </div>
@@ -30,13 +45,13 @@ export default function Header() {
                     <div className="nav_wrap">
                         <ul className="menu">
                             <li>
-                                <Link href="/about">about</Link>
+                                <Link href="/about" onClick={removeHd}>about</Link>
                             </li>
                             <li>
-                                <Link href="/work">work project</Link>
+                                <Link href="/work" onClick={removeHd}>work project</Link>
                             </li>
                             <li>
-                                <Link href="/contact">contact</Link>
+                                <Link href="/contact" onClick={removeHd}>contact</Link>
                             </li>
                         </ul>
                     </div>
