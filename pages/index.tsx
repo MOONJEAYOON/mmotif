@@ -2,6 +2,9 @@ import styled from '@emotion/styled'
 import Link from 'next/link'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
 // Import Swiper styles
 import 'swiper/css';
 
@@ -29,10 +32,12 @@ export default function Home() {
     return (
         <>
             <Swiper
+                modules={[Autoplay, Pagination]}
                 spaceBetween={0}
                 slidesPerView={1}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                loop={true}
+                pagination={{ clickable: true }}
             >
                 <SwiperSlide>
                     <div className="item lam">
@@ -332,7 +337,6 @@ export default function Home() {
                         </div>
                     </div>
                 </SwiperSlide>
-                ...
             </Swiper>
 
 
