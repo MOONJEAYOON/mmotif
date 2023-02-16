@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "predeploy": "npm run build",
     "deploy": "next build && next export && touch out/.nojekyll && git add -f out/ && git commit -m 'deploy to gh-pages' && git subtree push --prefix out origin gh-pages",
     "start": "next start",
@@ -14,6 +14,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@netlify/plugin-nextjs": "^4.30.4",
     "@next/font": "13.1.6",
     "@prisma/client": "^4.10.0",
     "@types/node": "18.13.0",

@@ -39,7 +39,7 @@ const Work: NextPage<Projects> = ({ projects }) => {
     return(
         <>
             {projects.map(project => (
-                <div className="pure-g work_project">
+                <div className="pure-g work_project" key={project.id}>
                     <div className="pure-u-1 pure-u-sm-1-2 pure-u-lg-5-8">
                         <div className="sq-u-1 sq-u-lg-2 sq_box_hidden list_detail">
                             <div className="sq_box img-u-1">

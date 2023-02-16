@@ -2,7 +2,7 @@ import PortfolioContext from '../context/context';
 import React, { useContext } from "react";
 import Link from "next/link";
 
-export default function mainContent(){
+export default function MainContent(){
     const { prefix } = useContext(PortfolioContext);
     return(
         <>
