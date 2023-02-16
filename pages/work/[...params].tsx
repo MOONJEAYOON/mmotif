@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import { PrismaClient } from '@prisma/client'
 import { GetServerSideProps } from 'next'
-import PortfolioContext from '../../context/context';
 import React, { useContext } from "react";
 
 type MovieDetailParams = [string, string] | [];
@@ -35,7 +34,6 @@ interface Projects {
 }
 
 const Work: NextPage<Projects> = ({ projects }) => {
-    const { prefix } = useContext(PortfolioContext);
     return(
         <>
             {projects.map(project => (
@@ -43,7 +41,7 @@ const Work: NextPage<Projects> = ({ projects }) => {
                     <div className="pure-u-1 pure-u-sm-1-2 pure-u-lg-5-8">
                         <div className="sq-u-1 sq-u-lg-2 sq_box_hidden list_detail">
                             <div className="sq_box img-u-1">
-                                <img src={`${prefix}/images/projet/detail/${project.image_detail_1}`} alt="" className="c_img"/>
+                                <img src={`/images/projet/detail/${project.image_detail_1}`} alt="" className="c_img"/>
                             </div>
                         </div>
                     </div>
@@ -65,7 +63,7 @@ const Work: NextPage<Projects> = ({ projects }) => {
                                 <div className="sq-u-4 sq-u-sm-1 sq-u-md-1 sq_box_hidden list_detail" style={{backgroundColor:`${project.image_detail_2_bg}`}}>
                                     <div className="sq_box">
                                         <div className="middle_inner">
-                                            <img src={`${prefix}/images/projet/square/${project.image_detail_2}`} alt="" className="c_img_logo"/>
+                                            <img src={`/images/projet/square/${project.image_detail_2}`} alt="" className="c_img_logo"/>
                                         </div>
                                     </div>
                                 </div>
@@ -73,14 +71,14 @@ const Work: NextPage<Projects> = ({ projects }) => {
                             <div className="pure-u-1 pure-u-sm-1-2 pure-u-md-1-2">
                                 <div className="sq-u-1 sq-u-sm-1 sq-u-md-1 sq_box_hidden list_detail">
                                     <div className="sq_box">
-                                        <img src={`${prefix}/images/projet/detail/${project.image_detail_3}`} alt="" className="c_img"/>
+                                        <img src={`/images/projet/detail/${project.image_detail_3}`} alt="" className="c_img"/>
                                     </div>
                                 </div>
                             </div>
                             <div className="pure-u-1 pure-u-sm-1-2 pure-u-md-1-2">
                                 <div className="sq-u-1 sq-u-sm-1 sq-u-md-1 sq_box_hidden list_detail">
                                     <div className="sq_box">
-                                        <img src={`${prefix}/images/projet/detail/${project.image_detail_4}`} alt="" className="c_img"/>
+                                        <img src={`/images/projet/detail/${project.image_detail_4}`} alt="" className="c_img"/>
                                     </div>
                                 </div>
                             </div>
@@ -100,14 +98,14 @@ const Work: NextPage<Projects> = ({ projects }) => {
                     <div className="pure-u-1 pure-u-sm-1-2 pure-u-md-1-2">
                         <div className="sq-u-1 list_detail">
                             <div className="sq_box">
-                                <img src={`${prefix}/images/projet/detail/${project.image_detail_5}`} alt="" className="c_img"/>
+                                <img src={`/images/projet/detail/${project.image_detail_5}`} alt="" className="c_img"/>
                             </div>
                         </div>
                     </div>
                     <div className="pure-u-1 pure-u-sm-1-2 pure-u-md-1-2">
                         <div className="sq-u-1 list_detail">
                             <div className="sq_box">
-                                <img src={`${prefix}/images/projet/detail/${project.image_detail_6}`} alt="" className="c_img"/>
+                                <img src={`/images/projet/detail/${project.image_detail_6}`} alt="" className="c_img"/>
                             </div>
                         </div>
                     </div>
@@ -125,7 +123,7 @@ const Work: NextPage<Projects> = ({ projects }) => {
                             <div className="pure-u-1">
                                 <div className="sq-u-4 list_detail">
                                     <div className="sq_box">
-                                        <img src={`${prefix}/images/projet/detail/${project.image_detail_7}`} alt="" className="c_img"/>
+                                        <img src={`/images/projet/detail/${project.image_detail_7}`} alt="" className="c_img"/>
                                     </div>
                                 </div>
                             </div>

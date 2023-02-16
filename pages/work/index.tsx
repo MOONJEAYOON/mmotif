@@ -1,7 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import {GetServerSideProps, NextPage} from 'next'
 import Link from "next/link";
-import PortfolioContext from '../../context/context';
 import React, { useContext } from "react";
 
 const prisma = new PrismaClient();
@@ -33,16 +32,15 @@ interface Projects {
 }
 
 const Works: NextPage<Projects> = ({ projects }) => {
-    const { prefix } = useContext(PortfolioContext);
     return(
         <div className="pure-g work_project">
             {projects.map(project => (
                 <div key={project.id}  className="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
                     <div className="sq-u-1 sq_box_hidden list">
                         <div className="sq_box">
-                            <img src={`${prefix}/images/projet/square/${project.image_list_1}`} alt="" className="c_img"/>
+                            <img src={`/images/projet/square/${project.image_list_1}`} alt="" className="c_img"/>
                             <div className="middle_inner">
-                                <img src={`${prefix}/images/projet/square/${project.image_list_2}`} alt="" className="c_img_logo"/>
+                                <img src={`/images/projet/square/${project.image_list_2}`} alt="" className="c_img_logo"/>
                             </div>
                         </div>
                         <div className="sq_box overlay">
@@ -66,15 +64,15 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     const router = context.resolvedUrl;
     let projects;
     console.log(router);
-    if (router === '/work/?graphic=') {
+    if (router === '/work?graphic=') {
         projects = await prisma?.project.findMany({
             where: { category: 'GRAPHIC' },
         })
-    } else if (router === '/work/?advertising=') {
+    } else if (router === '/work?advertising=') {
         projects = await prisma?.project.findMany({
             where: { category: 'ADVERTISING' },
         })
-    } else if (router === '/work/?print=') {
+    } else if (router === '/work?print=') {
         projects = await prisma?.project.findMany({
             where: { category: 'PRINT' },
         })
